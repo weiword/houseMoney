@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weiword</title>
+  <style>
+    :root {
+      /* Overridden at runtime with a random font from /fonts (falls back to system) */
+      --rand-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    html, body { margin: 0; padding: 0; height: 100%; background: #1a1512; }
+    .bg {
+      position: fixed; inset: 0;
+      width: 100vw; height: 100vh; height: 100dvh;
+      object-fit: cover; object-position: center;
+      display: block; z-index: 0;
+    }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px; background: transparent;
+    }
+    .wordmark {
+      font-family: var(--rand-font);
+      font-size: 36px; font-weight: 700; color: #fff;
+      -webkit-text-stroke: 1px #000; paint-order: stroke fill;
+      letter-spacing: 0.2px; line-height: 1; user-select: none;
+    }
+    .connect-btn {
+      font-family: var(--rand-font);
+      font-size: 14px; font-weight: 500; color: #000;
+      background: #fff; border: 1px solid #000; border-radius: 7px;
+      padding: 7px 16px; cursor: pointer; line-height: 1; min-width: 92px;
+    }
+    .connect-btn:hover { background: #f0f0f0; }
+    .connect-btn:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+    .connect-btn:disabled { opacity: 0.7; cursor: default; }
+  </style>
+</head>
+<body>
+  <!-- src is the fallback shown until a random image loads (and if the folder is empty) -->
+  <img class="bg" src="background.jpeg" alt="">
+  <header>
+    <span class="wordmark">weiword</span>
+    <button class="connect-btn" id="connectBtn" type="button">Connect</button>
+  </header>
+  <script src="js/random.js"></script>
+  <script type="module" src="js/wallet.bundle.js"></script>
+</body>
+</html>
