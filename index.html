@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weiword</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+  <!-- Random background (shown until connected). Falls back to background.jpeg -->
+  <img class="bg" src="background.jpeg" alt="">
+  <!-- Paper backdrop that covers the image once connected -->
+  <div class="app-bg"></div>
+
+  <!-- Full-width top bar -->
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" type="button" aria-label="Menu">&#9776;</button>
+    <span class="wordmark" data-p="home">weiword</span>
+    <div class="top-right">
+      <button class="connect-btn" id="connectBtn" type="button">Connect</button>
+    </div>
+  </header>
+
+  <!-- Left nav (words only), shown once connected -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="side-nav" id="nav">
+      <a class="side-item" data-p="ww" href="javascript:void(0)">$WWW</a>
+      <a class="side-item" data-p="staking" href="javascript:void(0)">Staking</a>
+      <a class="side-item" data-p="treasury" href="javascript:void(0)">Treasury</a>
+    </nav>
+  </aside>
+  <div class="sidebar-scrim" id="scrim"></div>
+
+  <!-- Content (shown once connected) -->
+  <main class="content"><div class="content-inner" id="pageContent"></div></main>
+
+  <script src="js/random.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script type="module" src="js/wallet.bundle.js"></script>
+</body>
+</html>
