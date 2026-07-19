@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weiword</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+  <!-- Random background (shown until connected). Falls back to background.jpeg -->
+  <img class="bg" src="background.jpeg" alt="">
+  <!-- Paper backdrop that covers the image once connected -->
+  <div class="app-bg"></div>
+
+  <!-- Full-width top bar -->
+  <header class="topbar">
+    <button class="hamburger" id="hamburger" type="button" aria-label="Menu">&#9776;</button>
+    <span class="wordmark" data-p="home"><span class="mark">▚▚</span>weiword</span>
+    <div class="top-right">
+      <button class="connect-btn" id="connectBtn" type="button">Connect</button>
+    </div>
+  </header>
+
+  <!-- Left nav (words only), shown once connected -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="side-nav" id="nav">
+      <a class="side-item" data-p="ww" href="javascript:void(0)">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12.5 1.25a.75.75 0 0 0-1.5 0v8.69L6.447 5.385a.75.75 0 1 0-1.061 1.06L9.94 11H1.25a.75.75 0 0 0 0 1.5h8.69l-4.554 4.553a.75.75 0 0 0 1.06 1.061L11 13.561v8.689a.75.75 0 0 0 1.5 0v-8.69l4.553 4.554a.75.75 0 0 0 1.061-1.06L13.561 12.5h8.689a.75.75 0 0 0 0-1.5h-8.69l4.554-4.553a.75.75 0 1 0-1.06-1.061L12.5 9.939V1.25Z"></path></svg>
+        <span>Token</span>
+      </a>
+      <a class="side-item" data-p="security" href="javascript:void(0)">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M16.53 9.78a.75.75 0 0 0-1.06-1.06L11 13.19l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5-5Z"></path><path d="m12.54.637 8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.771 10.704-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.77 20.705 2 16.19 2 10V4.976c0-.758.489-1.43 1.21-1.664L11.46.637a1.748 1.748 0 0 1 1.08 0Zm-.617 1.426-8.25 2.676a.249.249 0 0 0-.173.237V10c0 5.46 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.461 20.5 10V4.976a.25.25 0 0 0-.173-.237l-8.25-2.676a.253.253 0 0 0-.154 0Z"></path></svg>
+        <span>Security</span>
+      </a>
+      <a class="side-item" data-p="treasury" href="javascript:void(0)">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 20.25 20H19v.25a1 1 0 1 1-2 0V20H6.997v.25a1 1 0 1 1-2 0V20H3.75A1.75 1.75 0 0 1 2 18.25V3.75Zm1.75-.25a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h16.5a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25H3.75ZM14.318 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8.5A.75.75 0 1 0 6 10h1.5v2H6a.75.75 0 0 0 0 1.5h1.5V15A1.5 1.5 0 0 0 9 16.5h8a1.5 1.5 0 0 0 1.5-1.5V7A1.5 1.5 0 0 0 17 5.5H9A1.5 1.5 0 0 0 7.5 7v1.5H6ZM9 10a.75.75 0 0 0 0-1.5V7h8v8H9v-1.5A.75.75 0 0 0 9 12v-2Z"></path></svg>
+        <span>Treasury</span>
+      </a>
+    </nav>
+  </aside>
+  <div class="sidebar-scrim" id="scrim"></div>
+
+  <!-- Content (shown once connected) -->
+  <main class="content"><div class="content-inner" id="pageContent"></div></main>
+
+  <script src="js/random.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script type="module" src="js/wallet.bundle.js"></script>
+</body>
+</html>
